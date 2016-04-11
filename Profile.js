@@ -26,13 +26,16 @@ var Profile = React.createClass ({
   componentWillUnmount: function() {
     this.unbind('notes');                                       //removeListener from notes table
   },
+  handleAddNote: function(newNote) {        //function adds new note to the end of the notes' list
+    this.ref.child(this.props.params.username).child(this.state.notes.length).set(newNote)
+  },
   render: function() {
                                 //this.props.params - parameters via Router
     return (                    //calling components with parameters
       <div className="row">
         <div className="col-sm-4"><UserProfile username={this.props.params.username} bio={this.state.bio} /></div>
         <div className="col-sm-4"><Repos username={this.props.params.username} repos={this.state.repos} /></div>
-        <div className="col-sm-4"><Notes username={this.props.params.username} notes={this.state.notes} /></div>
+        <div className="col-sm-4"><Notes username={this.props.params.username} notes={this.state.notes} addNote={this.handleAddNote} /></div>
       </div>
     )
   }
