@@ -1,10 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+var React = require('react');
 
-class Main {
-  render() {
-    return <div> HelloWorld </div>
+var Main = React.createClass({
+  render: function() {
+    return (
+      <div className="main-container">
+        <nav className="navbar navbar-default" role="navigation">
+          <div className="col-sm-7 col-sm-offset-2" style={{marginTop: 15}}>MENU</div>
+        </nav>
+        <div className="container">
+          {this.props.children}
+        </div>
+      </div>
+    )
   }
-}
+});
 
-ReactDOM.render(<Main />, document.getElementById('app'))
+module.exports = Main;
