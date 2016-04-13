@@ -5,16 +5,15 @@ var UserProfile = require('./Github/UserProfile');
 var Notes = require('./Notes/Notes');
 var ReactFireMixin = require('reactfire');
 var Firebase = require('firebase');                 //DataBase
+var helpers = require('../utils/helpers');
 
 var Profile = React.createClass ({
   mixins: [ReactFireMixin],
   getInitialState: function() {
     return {                            //'state' field - init parameters
       notes: [1, 2, 3],
-      bio: {
-        name: 'Piotr Kardys'
-      },
-      repos: ['a', 'b', 'c']
+      bio: {},
+      repos: []
     }
   },
   componentDidMount: function() {
@@ -22,6 +21,13 @@ var Profile = React.createClass ({
     this.ref = new Firebase('https://resplendent-fire-4532.firebaseio.com/');
     var childRef = this.ref.child(this.props.params.username);
     this.bindAsArray(childRef, 'notes');                        //addListener to notes table
+
+    helpers.getGithubInfo(this.props.params.username).then(function(data) {
+      this.setState({
+        bio: data.bio,
+        repos: data.repos
+      })
+    }.bind(this))
   },
   componentWillUnmount: function() {
     this.unbind('notes');                                       //removeListener from notes table
