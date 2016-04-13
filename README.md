@@ -8,3 +8,4 @@
 "11.04.2016 - 18:20 - Lesson7: create file - AddNote.js; update files - Notes.js, Profile.js; 'Adding Notes Panel' added successfully" 
 "13.04.2016 - 13:00 - Lesson8: create file - SearchGithub.js; update file - Main.js; 'Searching Profiles Panel' added" 
 "13.04.2016 - 14:00 - Lesson9: create file - helpers.js; update files - Profile.js, Repos.js, UserProfile.js; receiving profile info from GitHub" 
+"13.04.2016 - 15:00 - Lesson10: update files - Repos.js, UserProfile.js; showing the GitHub content (UserInfo &UserRepos) on the page" 
