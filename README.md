@@ -10,3 +10,4 @@
 "13.04.2016 - 14:00 - Lesson9: create file - helpers.js; update files - Profile.js, Repos.js, UserProfile.js; receiving profile info from GitHub" 
 "13.04.2016 - 15:00 - Lesson10: update files - Repos.js, UserProfile.js; showing the GitHub content (UserInfo &UserRepos) on the page" 
 "13.04.2016 - 16:00 - Lesson11: update file - Profile.js; create init &componentWillReceiveProps method; refresh of the single content (not all page)" 
+"13.04.2016 - 17:50 - Lesson12 - 14: update all files (with the exception of Home.js, Main.js, Profile.js, SearchGithub.js); refactor code from ES5 to ES6" 

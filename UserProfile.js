@@ -1,11 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var UserProfiles = React.createClass({
-  propTypes: {
-    username: React.PropTypes.string.isRequired,
-    bio: React.PropTypes.object.isRequired
-  },
-  render: function() {
+class UserProfile extends React.Component {
+  render() {
     return (                  //shows all information about user (image, name, username, email etc..)
       <div>
         {this.props.bio.avatar_url && <li className="list-group-item"><img src={this.props.bio.avatar_url} className="img-rounded img-responsive"/></li>}
@@ -14,13 +10,18 @@ var UserProfiles = React.createClass({
         {this.props.bio.email && <li className="list-group-item">Email: {this.props.bio.email}</li>}
         {this.props.bio.location && <li className="list-group-item">Location: {this.props.bio.location}</li>}
         {this.props.bio.company && <li className="list-group-item">Company: {this.props.bio.company}</li>}
-        {this.props.bio.followers !== 0 && <li className="list-group-item">Followers: {this.props.bio.followers}</li>}
-        {this.props.bio.following !== 0 && <li className="list-group-item">Following: {this.props.bio.following}</li>}
-        {this.props.bio.public_repos && <li className="list-group-item">Public Repos: {this.props.bio.public_repos}</li>}
+        {(this.props.bio.followers !== 0 && this.props.bio.followers) && <li className="list-group-item">Followers: {this.props.bio.followers}</li>}
+        {(this.props.bio.following !== 0 && this.props.bio.following) &&  <li className="list-group-item">Following: {this.props.bio.following}</li>}
+        {(this.props.bio.public_repos !== 0 && this.props.bio.public_repos) && <li className="list-group-item">Public Repos: {this.props.bio.public_repos}</li>}
         {this.props.bio.blog && <li className="list-group-item">Blog: <a href={this.props.bio.blog}>{this.props.bio.blog}</a></li>}
       </div>
     )
   }
-});
+};
 
-module.exports = UserProfiles;
+UserProfile.propTypes = {
+  username: React.PropTypes.string.isRequired,
+  bio: React.PropTypes.object.isRequired
+};
+
+export default UserProfile;
