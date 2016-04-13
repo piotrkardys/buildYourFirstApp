@@ -6,3 +6,4 @@
 "11.04.2016 - 16:45 - Lesson5: create files - NotesList.js; update files - Profile.js, Notes.js; reading notes from DataBase (connecting with Firebase)" 
 "11.04.2016 - 17:15 - Lesson6: update files - Notes.js, UserProfile.js, Repos.js; adding propTypes to each class" 
 "11.04.2016 - 18:20 - Lesson7: create file - AddNote.js; update files - Notes.js, Profile.js; 'Adding Notes Panel' added successfully" 
+"13.04.2016 - 13:00 - Lesson8: create file - SearchGithub.js; update file - Main.js; 'Searching Profiles Panel' added" 
