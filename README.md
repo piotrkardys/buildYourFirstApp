@@ -12,3 +12,4 @@
 "13.04.2016 - 16:00 - Lesson11: update file - Profile.js; create init &componentWillReceiveProps method; refresh of the single content (not all page)" 
 "13.04.2016 - 17:50 - Lesson12 - 14: update all files (with the exception of Home.js, Main.js, Profile.js, SearchGithub.js); refactor code from ES5 to ES6" 
 "14.04.2016 - 14:15 - Lesson15 - 17: update all files; refactor code from ES5 to ES6" 
+"14.04.2016 - 14:15 - end of the project" 
